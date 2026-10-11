@@ -1,0 +1,12 @@
+{
+ "cm_N1_c0_smax80_rho7_sel_s0.csv": {
+  "rescored": 5.728194599975112,
+  "stored": 5.728194599975112,
+  "abs_diff_pp": 0.0
+ },
+ "heun_N50_c0_smax80_rho7_s0.csv": {
+  "rescored": 4.358617436025048,
+  "stored": 4.358617436025048,
+  "abs_diff_pp": 0.0
+ }
+}

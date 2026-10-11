@@ -1,0 +1,2 @@
+{"file": "val.csv", "n_syn": 3531, "mle_rmse": 9520.855389782899, "mle_r2": -0.0023631692355605693, "dcr_score": 0.4930614556782781, "dcr_median_to_train": 2.4128642526646544, "dcr_median_to_test": 2.4203703280183912, "dcr_rows": 3531, "extra_seconds": 15.4}
+{"file": "real.csv", "n_syn": 32148, "mle_rmse": 10391.055852943316, "mle_r2": -0.19396754402072114, "dcr_score": 0.5604, "dcr_median_to_train": 2.273129847481506, "dcr_median_to_test": 2.420454386938218, "dcr_rows": 5000, "extra_seconds": 21.5}

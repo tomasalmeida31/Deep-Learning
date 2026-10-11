@@ -1,0 +1,33 @@
+{
+ "verdict": "INCONCLUSIVE",
+ "per_dataset": [
+  {
+   "dataname": "defaultL_s0",
+   "absent": false,
+   "E99_shape": 1.1947016460905364,
+   "E99_trend": 2.2945278202333212,
+   "sigma_s_shape": 0.09473448793443243,
+   "sigma_s_trend": 0.4439922501379147,
+   "floor_shape": 0.48052126200274436,
+   "floor_trend": 4.953170745088442,
+   "floor_sd_shape": 0.04225360258731709,
+   "floor_sd_trend": 2.379150325186285,
+   "excluded_metrics": [
+    "trend"
+   ],
+   "tolerance": {
+    "shape": 0.2842034638032973,
+    "trend": 1.331976750413744
+   },
+   "NFE_star": 39,
+   "one_step_matches": false,
+   "one_step_best": "heun smax=80 shape=51.37 trend=59.13",
+   "churn99_minus_det99": {
+    "shape": -0.023851165980799394,
+    "trend": 0.16171254689978776
+   },
+   "n_configs": 26
+  }
+ ],
+ "rule": "Mechanical GO / STOP / GREY decision for the gate experiment (pre-registered rule).\n\n  python tools/gate_decide.py --datanames adultv_s0 defaultv_s0 newsv_s0\n\nInputs per dataset: results/<d>_gate.jsonl (from eval_fast, reference = real.csv = train')\nand results/<d>_floor.json (from floor_boot). Writes results/<d>_gate_summary.csv\n(one row per config: mean/sd over sampling seeds) and prints the verdict.\n\nRule (fixed before any model was trained):\n  E99      = mean shape/trend error of heun, 50 steps (99 NFE), s_churn = 0, over its seeds\n  sigma_s  = sd of that same config over its seeds\n  delta    = DELTA_SHAPE / DELTA_TREND (pp); tolerance per metric = max(delta, 3 * sigma_s)\n  a config \"matches\" if, for every metric NOT excluded, mean error <= E99 + tolerance;\n  a (dataset, metric) is EXCLUDED when its bootstrap-floor sd > delta / 3 (metric too noisy);\n  the floor MEAN never excludes anything (errors are reported as excess over it)\n  a dataset with NO surviving metric is ABSENT: it is dropped from the gate and the\n  denominators shrink (rule below); with < MIN_DATASETS surviving the gate is INCONCLUSIVE\n  and the next dataset in ADD_ORDER must be run before any verdict is read\n  NFE*     = smallest NFE over ALL configs (any solver, churn, schedule) that matches\n  1-step   = best (lowest excess) 1-NFE config; \"posterior mean suffices\" if it matches\n  Verdict over the surviving datasets S (|S| >= MIN_DATASETS):\n           STOP if NFE* <= 3 on all of S, or 1-step matches on all of S;\n           GO   if NFE* >= 7 on at least ceil(2/3 * |S|) of S  (3 -> 2, 2 -> 2, 4 -> 3);\n           GREY otherwise (student restricted to 1-2 NFE).\n"
+}

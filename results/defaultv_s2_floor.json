@@ -1,0 +1,9 @@
+{
+ "dataname": "defaultv_s2",
+ "n_boot": 5,
+ "n": 24300,
+ "shape_floor": 0.48052126200274436,
+ "shape_floor_sd": 0.04225360258731709,
+ "trend_floor": 4.953170745088442,
+ "trend_floor_sd": 2.379150325186285
+}

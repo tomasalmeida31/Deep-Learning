@@ -1,0 +1,3 @@
+slurm/leak_one.sbatch|adult|results/adultL_s0_LEAK_DONE:1
+slurm/leak_one.sbatch|default|results/defaultL_s0_LEAK_DONE:1
+slurm/leak_one.sbatch|news|results/newsL_s0_LEAK_DONE:1

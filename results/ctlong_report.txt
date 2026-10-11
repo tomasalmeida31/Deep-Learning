@@ -1,0 +1,14 @@
+dataset  seed  cd_1  ct20k_1  ct40k_1  ct20k_minus_cd_1  ct40k_minus_cd_1  ct40k_minus_ct20k_1  cd_2  ct20k_2  ct40k_2  ct20k_minus_cd_2  ct40k_minus_cd_2  ct40k_minus_ct20k_2  cd_4  ct20k_4  ct40k_4  ct20k_minus_cd_4  ct40k_minus_cd_4  ct40k_minus_ct20k_4  ct20k_plateau_exit  ct20k_last2k_rel_drop  ct20k_best_step  ct20k_last_step  ct40k_plateau_exit  ct40k_last2k_rel_drop  ct40k_best_step  ct40k_last_step
+  adult     0 2.531    9.043    9.059             6.512             6.529                0.016 1.967    8.305    8.482             6.338             6.515                0.177 1.895    8.281    8.374             6.387             6.479                0.093               15500                  0.002            19250            20000               15500                 -0.001            37750            40000
+default     0 2.992   10.692   10.674             7.700             7.682               -0.018 2.423    9.871    9.964             7.448             7.541                0.093 2.482    9.645    9.776             7.163             7.293                0.130               15250                  0.005            20000            20000               15250                  0.000            36750            40000
+   news     0 5.703    9.315    9.739             3.612             4.035                0.423 5.872    8.379    8.706             2.508             2.835                0.327 6.056    7.411    7.384             1.355             1.328               -0.027               15500                  0.007            20000            20000               15500                  0.001            40000            40000
+ct20k_minus_cd_1       mean +5.941  range +3.612 .. +7.700  (n = 3)
+ct40k_minus_cd_1       mean +6.082  range +4.035 .. +7.682  (n = 3)
+ct40k_minus_ct20k_1    mean +0.141  range -0.018 .. +0.423  (n = 3)
+ct20k_minus_cd_2       mean +5.431  range +2.508 .. +7.448  (n = 3)
+ct40k_minus_cd_2       mean +5.630  range +2.835 .. +7.541  (n = 3)
+ct40k_minus_ct20k_2    mean +0.199  range +0.093 .. +0.327  (n = 3)
+ct20k_minus_cd_4       mean +4.968  range +1.355 .. +7.163  (n = 3)
+ct40k_minus_cd_4       mean +5.033  range +1.328 .. +7.293  (n = 3)
+ct40k_minus_ct20k_4    mean +0.065  range -0.027 .. +0.130  (n = 3)
+written results/ctlong_cells.csv

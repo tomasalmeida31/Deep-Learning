@@ -1,0 +1,43 @@
+{
+ "dataname": "newsv_s2",
+ "student": "student_ct_s2",
+ "rows": [
+  {
+   "nfe": 1,
+   "n": 20,
+   "shape_mean": 9.344373418771518,
+   "shape_sd": 0.029603276667545,
+   "trend_mean": 3.595466066563122,
+   "trend_sd": 0.24955556214519195,
+   "teacher_shape_at_nfe": 49.6750899485712,
+   "teacher_trend_at_nfe": 19.305379641262377
+  },
+  {
+   "nfe": 2,
+   "n": 20,
+   "shape_mean": 7.7189353407158565,
+   "shape_sd": 0.039244804793736994,
+   "trend_mean": 2.885378002554279,
+   "trend_sd": 0.1596536039547437,
+   "teacher_shape_at_nfe": 49.65199688420224,
+   "teacher_trend_at_nfe": 19.24293971065932
+  },
+  {
+   "nfe": 4,
+   "n": 20,
+   "shape_mean": 7.23215350358757,
+   "shape_sd": 0.042238352690832974,
+   "trend_mean": 2.772674329244735,
+   "trend_sd": 0.08899308334215916,
+   "teacher_shape_at_nfe": 19.5927072964622,
+   "teacher_trend_at_nfe": 6.536829087746179
+  }
+ ],
+ "E99_shape": 3.9789119851934815,
+ "E99_trend": 2.066999494838199,
+ "teacher15_shape": 6.415199494006886,
+ "pilot_pass4": false,
+ "pilot_pass1": true,
+ "verdict": "FAIL",
+ "matches_E99_at_nfe": []
+}

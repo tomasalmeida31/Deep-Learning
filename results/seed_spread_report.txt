@@ -1,0 +1,18 @@
+
+adult: leak-free seed spread at E99 (shape, trend)
+  s0: shape=0.762  trend=1.913  (n=20)
+  s1: shape=1.024  trend=2.447  (n=20)
+  s2: shape=2.340  trend=5.298  (n=20)
+  Lk0: shape=2.689  trend=4.942  (n=20)  <- leaky protocol, seed 0
+
+default: leak-free seed spread at E99 (shape, trend)
+  s0: shape=1.431  trend=2.554  (n=20)
+  s1: shape=1.118  trend=4.159  (n=20)
+  s2: shape=2.846  trend=7.319  (n=20)
+  Lk0: shape=1.195  trend=2.295  (n=20)  <- leaky protocol, seed 0
+
+news: leak-free seed spread at E99 (shape, trend)
+  s0: shape=4.388  trend=2.125  (n=20)
+  s1: shape=2.470  trend=1.511  (n=20)
+  s2: shape=3.979  trend=2.067  (n=20)
+  Lk0: shape=2.621  trend=1.493  (n=20)  <- leaky protocol, seed 0

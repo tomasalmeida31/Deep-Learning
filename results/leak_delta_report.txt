@@ -1,0 +1,39 @@
+
+=== adult ===
+  free  (n shape=20 trend=20 c2st=20 dcr=20 mle=20): shape=0.7616 trend=1.9134 c2st=0.9890 dcr=0.5086 mle_roc_auc=0.9092 ref_dcr=0.7742 ref_auc=0.9230
+  leak  (n shape=20 trend=20 c2st=10 dcr=10 mle=10): shape=2.6885 trend=4.9421 c2st=0.8937 dcr=0.4988 mle_roc_auc=0.9027 ref_dcr=0.7742 ref_auc=0.9230
+  delta (leak - free):
+    shape: +1.9270  (free 0.7616 -> leak 2.6885)
+    trend: +3.0286  (free 1.9134 -> leak 4.9421)
+    c2st: -0.0953  (free 0.9890 -> leak 0.8937)
+    dcr: -0.0098  (free 0.5086 -> leak 0.4988)
+    mle_roc_auc: -0.0065  (free 0.9092 -> leak 0.9027)
+    ref_dcr: +0.0000  (free 0.7742 -> leak 0.7742)
+    ref_auc: +0.0000  (free 0.9230 -> leak 0.9230)
+
+=== default ===
+  free  (n shape=20 trend=20 c2st=10 dcr=10 mle=10): shape=1.4309 trend=2.5536 c2st=0.9695 dcr=0.5049 mle_roc_auc=0.7592 ref_dcr=0.5548 ref_auc=0.7748
+  leak  (n shape=20 trend=20 c2st=10 dcr=10 mle=10): shape=1.1947 trend=2.2945 c2st=0.9772 dcr=0.5038 mle_roc_auc=0.7601 ref_dcr=0.5548 ref_auc=0.7748
+  delta (leak - free):
+    shape: -0.2362  (free 1.4309 -> leak 1.1947)
+    trend: -0.2590  (free 2.5536 -> leak 2.2945)
+    c2st: +0.0077  (free 0.9695 -> leak 0.9772)
+    dcr: -0.0011  (free 0.5049 -> leak 0.5038)
+    mle_roc_auc: +0.0009  (free 0.7592 -> leak 0.7601)
+    ref_dcr: +0.0000  (free 0.5548 -> leak 0.5548)
+    ref_auc: +0.0000  (free 0.7748 -> leak 0.7748)
+
+=== news ===
+  free  (n shape=20 trend=20 c2st=10 dcr=10 mle=10): shape=4.3880 trend=2.1253 c2st=0.8336 dcr=0.5023 mle_rmse=14792.0287 mle_r2=-1.4413 mle_rmse_log=0.8646 mle_r2_log=0.1220 ref_dcr=0.5604 ref_r2=-0.1940
+  leak  (n shape=20 trend=20 c2st=10 dcr=10 mle=10): shape=2.6209 trend=1.4926 c2st=0.9319 dcr=0.4994 mle_rmse=11662.0826 mle_r2=-0.5178 mle_rmse_log=0.8582 mle_r2_log=0.1349 ref_dcr=0.5604 ref_r2=-0.1940
+  delta (leak - free):
+    shape: -1.7671  (free 4.3880 -> leak 2.6209)
+    trend: -0.6327  (free 2.1253 -> leak 1.4926)
+    c2st: +0.0984  (free 0.8336 -> leak 0.9319)
+    dcr: -0.0029  (free 0.5023 -> leak 0.4994)
+    mle_rmse: -3129.9462  (free 14792.0287 -> leak 11662.0826)
+    mle_r2: +0.9235  (free -1.4413 -> leak -0.5178)
+    mle_rmse_log: -0.0064  (free 0.8646 -> leak 0.8582)
+    mle_r2_log: +0.0129  (free 0.1220 -> leak 0.1349)
+    ref_dcr: +0.0000  (free 0.5604 -> leak 0.5604)
+    ref_r2: +0.0000  (free -0.1940 -> leak -0.1940)

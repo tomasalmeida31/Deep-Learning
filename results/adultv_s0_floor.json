@@ -1,0 +1,9 @@
+{
+ "dataname": "adultv_s0",
+ "n_boot": 5,
+ "n": 29306,
+ "shape_floor": 0.3688891922018134,
+ "shape_floor_sd": 0.03208848917759805,
+ "trend_floor": 0.9473855614347905,
+ "trend_floor_sd": 0.10856505666066606
+}

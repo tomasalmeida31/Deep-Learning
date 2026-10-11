@@ -1,0 +1,95 @@
+== per cell (shape pp; negative d_ = student better for shape/trend/rmse)
+dataset  seed  nfe  student_shape teacher_matched_cfg  teacher_matched_shape  nfe_star  teacher_star_shape  teacher99_shape  floor_shape
+  adult     0    1          2.531               heun1                 39.345        39               0.838            0.762        0.369
+  adult     0    2          1.967              euler2                 38.862        39               0.838            0.762        0.369
+  adult     0    4          1.895              euler4                 14.875        39               0.838            0.762        0.369
+  adult     1    1          2.462               heun1                 42.284        39               1.077            1.024        0.369
+  adult     1    2          2.215              euler2                 42.292        39               1.077            1.024        0.369
+  adult     1    4          2.070              euler4                 15.150        39               1.077            1.024        0.369
+  adult     2    1          3.218               heun1                 37.171        39               2.407            2.340        0.369
+  adult     2    2          2.913              euler2                 36.858        39               2.407            2.340        0.369
+  adult     2    4          3.064              euler4                 12.514        39               2.407            2.340        0.369
+default     0    1          2.992               heun1                 51.777        39               1.400            1.431        0.481
+default     0    2          2.423              euler2                 51.504        39               1.400            1.431        0.481
+default     0    4          2.482              euler4                 18.966        39               1.400            1.431        0.481
+default     1    1          2.638               heun1                 49.682        39               1.081            1.118        0.481
+default     1    2          2.107              euler2                 49.827        39               1.081            1.118        0.481
+default     1    4          2.030              euler4                 18.023        39               1.081            1.118        0.481
+default     2    1          4.781               heun1                 50.157        39               2.868            2.846        0.481
+default     2    2          4.195              euler2                 50.019        39               2.868            2.846        0.481
+default     2    4          4.148              euler4                 21.208        39               2.868            2.846        0.481
+   news     0    1          5.703               heun1                 47.985        25               4.579            4.388        1.425
+   news     0    2          5.872              euler2                 47.880        25               4.579            4.388        1.425
+   news     0    4          6.056              euler4                 19.512        25               4.579            4.388        1.425
+   news     1    1          4.685               heun1                 49.435        39               2.299            2.470        1.425
+   news     1    2          4.204              euler2                 49.329        39               2.299            2.470        1.425
+   news     1    4          3.903              euler4                 19.979        39               2.299            2.470        1.425
+   news     2    1          5.103               heun1                 49.675        25               3.773            3.979        1.425
+   news     2    2          4.843              euler2                 49.652        25               3.773            3.979        1.425
+   news     2    4          4.954              euler4                 19.593        25               3.773            3.979        1.425
+== paired summary over cells
+ nfe               comparison  cells  mean_diff  sd_over_cells  student_wins  sign_p
+   1       d_shape_vs_matched      9    -42.600          4.877             9   0.004
+   1          d_shape_vs_best      9    -36.705          9.678             9   0.004
+   1          d_shape_vs_fair      9    -15.250          2.089             9   0.004
+   1          d_shape_vs_star      9      1.532          0.455             0   0.004
+   1           d_shape_vs_ref      9      1.582          0.424             0   0.004
+   1            d_shape_vs_99      9      1.528          0.408             0   0.004
+   1       d_trend_vs_matched      6    -46.533         31.996             6   0.031
+   1          d_trend_vs_best      6    -41.322         30.952             6   0.031
+   1          d_trend_vs_fair      6    -15.921         12.474             6   0.031
+   1          d_trend_vs_star      6      1.476          1.082             0   0.031
+   1           d_trend_vs_ref      6      1.477          1.073             0   0.031
+   1            d_trend_vs_99      6      1.465          1.083             0   0.031
+   1        d_c2st_vs_matched      9      0.857          0.061             9   0.004
+   1           d_c2st_vs_fair      9      0.558          0.100             9   0.004
+   1             d_c2st_vs_99      9     -0.057          0.039             1   0.039
+   1 d_mle_roc_auc_vs_matched      1      0.343            NaN             1   1.000
+   1      d_mle_roc_auc_vs_99      6     -0.003          0.003             1   0.219
+   1   d_dcr_score_vs_matched      9     -0.385          0.129             9   0.004
+   1        d_dcr_score_vs_99      9     -0.000          0.004             5   1.000
+   1  d_mle_r2_log_vs_matched      3      0.157          0.017             3   0.250
+   1       d_mle_r2_log_vs_99      3     -0.011          0.007             0   0.250
+   2       d_shape_vs_matched      9    -42.832          5.044             9   0.004
+   2          d_shape_vs_best      9    -36.944          9.863             9   0.004
+   2          d_shape_vs_fair      9    -15.471          2.132             9   0.004
+   2          d_shape_vs_star      9      1.157          0.367             0   0.004
+   2           d_shape_vs_ref      9      1.207          0.374             0   0.004
+   2            d_shape_vs_99      9      1.153          0.347             0   0.004
+   2       d_trend_vs_matched      6    -46.844         32.439             6   0.031
+   2          d_trend_vs_best      6    -41.953         31.442             6   0.031
+   2          d_trend_vs_fair      6    -16.250         12.777             6   0.031
+   2          d_trend_vs_star      6      1.039          0.722             0   0.031
+   2           d_trend_vs_ref      6      1.040          0.716             0   0.031
+   2            d_trend_vs_99      6      1.029          0.727             0   0.031
+   2        d_c2st_vs_matched      9      0.857          0.083             9   0.004
+   2           d_c2st_vs_fair      9      0.553          0.117             9   0.004
+   2             d_c2st_vs_99      9     -0.058          0.039             0   0.004
+   2 d_mle_roc_auc_vs_matched      1      0.185            NaN             1   1.000
+   2      d_mle_roc_auc_vs_99      6     -0.004          0.002             0   0.031
+   2   d_dcr_score_vs_matched      9     -0.365          0.148             9   0.004
+   2        d_dcr_score_vs_99      9     -0.001          0.002             7   0.180
+   2  d_mle_r2_log_vs_matched      3      0.150          0.018             3   0.250
+   2       d_mle_r2_log_vs_99      3     -0.018          0.004             0   0.250
+   4       d_shape_vs_matched      9    -14.358          2.397             9   0.004
+   4          d_shape_vs_best      9    -11.694          4.602             9   0.004
+   4          d_shape_vs_fair      9     -2.404          1.238             9   0.004
+   4          d_shape_vs_star      9      1.142          0.286             0   0.004
+   4           d_shape_vs_ref      9      1.192          0.314             0   0.004
+   4            d_shape_vs_99      9      1.138          0.287             0   0.004
+   4       d_trend_vs_matched      6    -14.721         11.575             6   0.031
+   4          d_trend_vs_best      6    -12.498         10.201             6   0.031
+   4          d_trend_vs_fair      6     -1.870          2.045             6   0.031
+   4          d_trend_vs_star      6      1.082          0.742             0   0.031
+   4           d_trend_vs_ref      6      1.083          0.734             0   0.031
+   4            d_trend_vs_99      6      1.072          0.746             0   0.031
+   4        d_c2st_vs_matched      9      0.493          0.096             9   0.004
+   4           d_c2st_vs_fair      9      0.150          0.058             9   0.004
+   4             d_c2st_vs_99      9     -0.053          0.026             0   0.004
+   4 d_mle_roc_auc_vs_matched      6      0.041          0.014             6   0.031
+   4      d_mle_roc_auc_vs_99      6     -0.004          0.003             1   0.219
+   4   d_dcr_score_vs_matched      9     -0.006          0.009             8   0.039
+   4        d_dcr_score_vs_99      9     -0.002          0.003             6   0.508
+   4  d_mle_r2_log_vs_matched      3      0.023          0.005             3   0.250
+   4       d_mle_r2_log_vs_99      3     -0.020          0.003             0   0.250
+written results/study_study_cells.csv, results/study_study_summary.csv  (3 datasets x 3 seeds)

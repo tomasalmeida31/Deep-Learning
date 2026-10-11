@@ -1,0 +1,20 @@
+# Library versions from our cluster environment (full list: results/conda_list.txt). Python 3.11.
+# Install with:  pip install -r requirements.txt   and then:  pip install libzero==0.0.8 --no-deps
+# The line below lets pip find the CUDA 12.8 build of PyTorch.
+--extra-index-url https://download.pytorch.org/whl/cu128
+torch==2.11.0+cu128
+numpy==1.26.4
+pandas==2.0.3
+scipy==1.17.1
+scikit-learn==1.9.1
+xgboost==3.2.0
+sdmetrics==0.11.1
+rdt==1.22.0
+category-encoders==2.11.1
+icecream==2.2.0
+tomli==2.4.1
+tomli-w==1.2.0
+xlrd==2.0.2
+tqdm==4.70.1
+pynvml==11.5.3
+matplotlib==3.11.2

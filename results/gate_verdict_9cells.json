@@ -1,0 +1,237 @@
+{
+ "verdict": "GO",
+ "per_dataset": [
+  {
+   "dataname": "adultv_s0",
+   "absent": false,
+   "E99_shape": 0.761550535726474,
+   "E99_trend": 1.9134287605689404,
+   "sigma_s_shape": 0.05663035068054123,
+   "sigma_s_trend": 0.26485222346191034,
+   "floor_shape": 0.3688891922018134,
+   "floor_trend": 0.9473855614347905,
+   "floor_sd_shape": 0.03208848917759805,
+   "floor_sd_trend": 0.10856505666066606,
+   "excluded_metrics": [],
+   "tolerance": {
+    "shape": 0.25,
+    "trend": 0.794556670385731
+   },
+   "NFE_star": 39,
+   "one_step_matches": false,
+   "one_step_best": "heun smax=3 shape=25.14 trend=61.25",
+   "churn99_minus_det99": {
+    "shape": -0.04050365112946486,
+    "trend": 0.010134025017161097
+   },
+   "n_configs": 76
+  },
+  {
+   "dataname": "adultv_s1",
+   "absent": false,
+   "E99_shape": 1.0241588753156305,
+   "E99_trend": 2.446696751349086,
+   "sigma_s_shape": 0.07240230337760771,
+   "sigma_s_trend": 0.3301792044220578,
+   "floor_shape": 0.3688891922018134,
+   "floor_trend": 0.9473855614347905,
+   "floor_sd_shape": 0.03208848917759805,
+   "floor_sd_trend": 0.10856505666066606,
+   "excluded_metrics": [],
+   "tolerance": {
+    "shape": 0.25,
+    "trend": 0.9905376132661734
+   },
+   "NFE_star": 39,
+   "one_step_matches": false,
+   "one_step_best": "heun smax=80 shape=42.28 trend=81.97",
+   "churn99_minus_det99": {
+    "shape": -0.021394936190543,
+    "trend": 0.08681554247074397
+   },
+   "n_configs": 26
+  },
+  {
+   "dataname": "adultv_s2",
+   "absent": false,
+   "E99_shape": 2.3402602424986907,
+   "E99_trend": 5.29816341528839,
+   "sigma_s_shape": 0.06386079135971254,
+   "sigma_s_trend": 0.3316132444342736,
+   "floor_shape": 0.3688891922018134,
+   "floor_trend": 0.9473855614347905,
+   "floor_sd_shape": 0.03208848917759805,
+   "floor_sd_trend": 0.10856505666066604,
+   "excluded_metrics": [],
+   "tolerance": {
+    "shape": 0.25,
+    "trend": 0.9948397333028207
+   },
+   "NFE_star": 39,
+   "one_step_matches": false,
+   "one_step_best": "heun smax=80 shape=37.12 trend=79.44",
+   "churn99_minus_det99": {
+    "shape": -0.002991423826744999,
+    "trend": 0.059728392869985214
+   },
+   "n_configs": 26
+  },
+  {
+   "dataname": "defaultv_s0",
+   "absent": false,
+   "E99_shape": 1.4308556241426629,
+   "E99_trend": 2.5535502787002273,
+   "sigma_s_shape": 0.0987289018789401,
+   "sigma_s_trend": 0.48220629369018364,
+   "floor_shape": 0.48052126200274436,
+   "floor_trend": 4.953170745088442,
+   "floor_sd_shape": 0.0422536025873171,
+   "floor_sd_trend": 2.379150325186285,
+   "excluded_metrics": [
+    "trend"
+   ],
+   "tolerance": {
+    "shape": 0.29618670563682026,
+    "trend": 1.446618881070551
+   },
+   "NFE_star": 39,
+   "one_step_matches": false,
+   "one_step_best": "heun smax=3 shape=29.12 trend=37.54",
+   "churn99_minus_det99": {
+    "shape": -0.007013031550068938,
+    "trend": 0.37408911817706647
+   },
+   "n_configs": 76
+  },
+  {
+   "dataname": "defaultv_s1",
+   "absent": false,
+   "E99_shape": 1.118201303155007,
+   "E99_trend": 4.158583343563221,
+   "sigma_s_shape": 0.06930357935146966,
+   "sigma_s_trend": 0.7204332578158495,
+   "floor_shape": 0.48052126200274436,
+   "floor_trend": 4.953170745088443,
+   "floor_sd_shape": 0.04225360258731709,
+   "floor_sd_trend": 2.379150325186292,
+   "excluded_metrics": [
+    "trend"
+   ],
+   "tolerance": {
+    "shape": 0.25,
+    "trend": 2.1612997734475488
+   },
+   "NFE_star": 39,
+   "one_step_matches": false,
+   "one_step_best": "heun smax=80 shape=49.68 trend=55.35",
+   "churn99_minus_det99": {
+    "shape": -0.021039094650208368,
+    "trend": 0.06780855635803285
+   },
+   "n_configs": 26
+  },
+  {
+   "dataname": "defaultv_s2",
+   "absent": false,
+   "E99_shape": 2.8462791495198925,
+   "E99_trend": 7.318592449120534,
+   "sigma_s_shape": 0.10004516272473366,
+   "sigma_s_trend": 1.2034929273542503,
+   "floor_shape": 0.48052126200274436,
+   "floor_trend": 4.953170745088442,
+   "floor_sd_shape": 0.04225360258731709,
+   "floor_sd_trend": 2.379150325186285,
+   "excluded_metrics": [
+    "trend"
+   ],
+   "tolerance": {
+    "shape": 0.300135488174201,
+    "trend": 3.610478782062751
+   },
+   "NFE_star": 39,
+   "one_step_matches": false,
+   "one_step_best": "heun smax=80 shape=50.16 trend=65.91",
+   "churn99_minus_det99": {
+    "shape": -0.015466392318246758,
+    "trend": 0.7349648956633734
+   },
+   "n_configs": 26
+  },
+  {
+   "dataname": "newsv_s0",
+   "absent": false,
+   "E99_shape": 4.388012732777572,
+   "E99_trend": 2.125312310500955,
+   "sigma_s_shape": 0.03482573276808044,
+   "sigma_s_trend": 0.03579150855407071,
+   "floor_shape": 1.4247257475840924,
+   "floor_trend": 0.37753332326035505,
+   "floor_sd_shape": 0.013753131112809644,
+   "floor_sd_trend": 0.026030047371355773,
+   "excluded_metrics": [],
+   "tolerance": {
+    "shape": 0.25,
+    "trend": 0.5
+   },
+   "NFE_star": 25,
+   "one_step_matches": false,
+   "one_step_best": "heun smax=3 shape=31.79 trend=10.78",
+   "churn99_minus_det99": {
+    "shape": 0.07630075484218679,
+    "trend": -0.01647285196517778
+   },
+   "n_configs": 76
+  },
+  {
+   "dataname": "newsv_s1",
+   "absent": false,
+   "E99_shape": 2.4704426921322247,
+   "E99_trend": 1.5107959738835837,
+   "sigma_s_shape": 0.03613501897010343,
+   "sigma_s_trend": 0.048765288013773646,
+   "floor_shape": 1.4247257475840924,
+   "floor_trend": 0.37753332326035505,
+   "floor_sd_shape": 0.013753131112809644,
+   "floor_sd_trend": 0.026030047371355773,
+   "excluded_metrics": [],
+   "tolerance": {
+    "shape": 0.25,
+    "trend": 0.5
+   },
+   "NFE_star": 39,
+   "one_step_matches": false,
+   "one_step_best": "heun smax=80 shape=49.43 trend=19.12",
+   "churn99_minus_det99": {
+    "shape": 0.028624123843883797,
+    "trend": 0.023261428162208775
+   },
+   "n_configs": 26
+  },
+  {
+   "dataname": "newsv_s2",
+   "absent": false,
+   "E99_shape": 3.9789119851934815,
+   "E99_trend": 2.066999494838199,
+   "sigma_s_shape": 0.04226038616042324,
+   "sigma_s_trend": 0.031234181421798592,
+   "floor_shape": 1.4247257475840924,
+   "floor_trend": 0.37753332326035505,
+   "floor_sd_shape": 0.013753131112809644,
+   "floor_sd_trend": 0.02603004737135577,
+   "excluded_metrics": [],
+   "tolerance": {
+    "shape": 0.25,
+    "trend": 0.5
+   },
+   "NFE_star": 25,
+   "one_step_matches": false,
+   "one_step_best": "heun smax=80 shape=49.68 trend=19.31",
+   "churn99_minus_det99": {
+    "shape": 0.06361852473974228,
+    "trend": 0.021622048361225055
+   },
+   "n_configs": 26
+  }
+ ],
+ "rule": "Mechanical GO / STOP / GREY decision for the gate experiment (pre-registered rule).\n\n  python tools/gate_decide.py --datanames adultv_s0 defaultv_s0 newsv_s0\n\nInputs per dataset: results/<d>_gate.jsonl (from eval_fast, reference = real.csv = train')\nand results/<d>_floor.json (from floor_boot). Writes results/<d>_gate_summary.csv\n(one row per config: mean/sd over sampling seeds) and prints the verdict.\n\nRule (fixed before any model was trained):\n  E99      = mean shape/trend error of heun, 50 steps (99 NFE), s_churn = 0, over its seeds\n  sigma_s  = sd of that same config over its seeds\n  delta    = DELTA_SHAPE / DELTA_TREND (pp); tolerance per metric = max(delta, 3 * sigma_s)\n  a config \"matches\" if, for every metric NOT excluded, mean error <= E99 + tolerance;\n  a (dataset, metric) is EXCLUDED when its bootstrap-floor sd > delta / 3 (metric too noisy);\n  the floor MEAN never excludes anything (errors are reported as excess over it)\n  a dataset with NO surviving metric is ABSENT: it is dropped from the gate and the\n  denominators shrink (rule below); with < MIN_DATASETS surviving the gate is INCONCLUSIVE\n  and the next dataset in ADD_ORDER must be run before any verdict is read\n  NFE*     = smallest NFE over ALL configs (any solver, churn, schedule) that matches\n  1-step   = best (lowest excess) 1-NFE config; \"posterior mean suffices\" if it matches\n  Verdict over the surviving datasets S (|S| >= MIN_DATASETS):\n           STOP if NFE* <= 3 on all of S, or 1-step matches on all of S;\n           GO   if NFE* >= 7 on at least ceil(2/3 * |S|) of S  (3 -> 2, 2 -> 2, 4 -> 3);\n           GREY otherwise (student restricted to 1-2 NFE).\n"
+}

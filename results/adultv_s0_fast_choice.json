@@ -1,0 +1,52 @@
+{
+ "1": {
+  "solver": "euler",
+  "steps": 1,
+  "sigma_max": 1,
+  "rho": 7,
+  "nfe": 1,
+  "val_shape": 15.70294173676804,
+  "val_trend": 32.64217226610412,
+  "n_candidates": 7
+ },
+ "2": {
+  "solver": "euler",
+  "steps": 1,
+  "sigma_max": 1,
+  "rho": 7,
+  "nfe": 1,
+  "val_shape": 15.70294173676804,
+  "val_trend": 32.64217226610412,
+  "n_candidates": 21
+ },
+ "4": {
+  "solver": "dpmpp2m",
+  "steps": 4,
+  "sigma_max": 3,
+  "rho": 3,
+  "nfe": 4,
+  "val_shape": 5.642244601848505,
+  "val_trend": 10.60476193578288,
+  "n_candidates": 70
+ },
+ "8": {
+  "solver": "dpmpp2m",
+  "steps": 8,
+  "sigma_max": 5,
+  "rho": 7,
+  "nfe": 8,
+  "val_shape": 2.782972908778021,
+  "val_trend": 6.3454442093435715,
+  "n_candidates": 133
+ },
+ "16": {
+  "solver": "dpmpp2m",
+  "steps": 16,
+  "sigma_max": 10,
+  "rho": 7,
+  "nfe": 16,
+  "val_shape": 1.7212397584018935,
+  "val_trend": 5.245693366962124,
+  "n_candidates": 196
+ }
+}

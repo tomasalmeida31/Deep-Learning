@@ -1,0 +1,2 @@
+{"file": "val.csv", "n_syn": 2700, "mle_accuracy": 0.797, "mle_roc_auc": 0.7362980532879725, "dcr_score": 0.5, "dcr_median_to_train": 0.25666687491782947, "dcr_median_to_test": 0.26221554825165927, "dcr_rows": 2700, "extra_seconds": 11.2}
+{"file": "real.csv", "n_syn": 24300, "mle_accuracy": 0.8153333333333334, "mle_roc_auc": 0.7748052677476094, "dcr_score": 0.5548, "dcr_median_to_train": 0.19777639710727138, "dcr_median_to_test": 0.24538709190863056, "dcr_rows": 5000, "extra_seconds": 20.7}

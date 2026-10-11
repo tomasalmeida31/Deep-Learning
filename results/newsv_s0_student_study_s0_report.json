@@ -1,0 +1,43 @@
+{
+ "dataname": "newsv_s0",
+ "student": "student_study_s0",
+ "rows": [
+  {
+   "nfe": 1,
+   "n": 20,
+   "shape_mean": 5.703478184231267,
+   "shape_sd": 0.04186905408002418,
+   "trend_mean": 2.6262962263659544,
+   "trend_sd": 0.036442424636747545,
+   "teacher_shape_at_nfe": 47.98511312264112,
+   "teacher_trend_at_nfe": 21.092731063076435
+  },
+  {
+   "nfe": 2,
+   "n": 20,
+   "shape_mean": 5.8715290738667,
+   "shape_sd": 0.03146191383401896,
+   "trend_mean": 2.4060817678380775,
+   "trend_sd": 0.01880036367989275,
+   "teacher_shape_at_nfe": 47.88019472439966,
+   "teacher_trend_at_nfe": 20.63359117346969
+  },
+  {
+   "nfe": 4,
+   "n": 20,
+   "shape_mean": 6.056497164157438,
+   "shape_sd": 0.037665176187185734,
+   "trend_mean": 2.4289356799651385,
+   "trend_sd": 0.025300433599170943,
+   "teacher_shape_at_nfe": 19.51184106839202,
+   "teacher_trend_at_nfe": 6.775836361944881
+  }
+ ],
+ "E99_shape": 4.388012732777572,
+ "E99_trend": 2.125312310500955,
+ "teacher15_shape": 7.172060340715857,
+ "pilot_pass4": true,
+ "pilot_pass1": true,
+ "verdict": "PASS",
+ "matches_E99_at_nfe": []
+}

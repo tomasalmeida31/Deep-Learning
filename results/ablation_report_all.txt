@@ -1,0 +1,86 @@
+
+===== fast =====
+dataset  seed                  F1_cfg  F1_shape  F1_c2st                    F2_cfg  F2_shape  F2_c2st                     F4_cfg  F4_shape  F4_c2st                    F8_cfg  F8_shape  F8_c2st                      F16_cfg  F16_shape  F16_c2st  S1_shape  S1_c2st  S2_shape  S2_c2st  S4_shape  S4_c2st  d_S1_F1  d_S2_F2  d_S4_F4  d_S1_F4  d_S1_F8  d_S1_F16  d_c2st_S4_F4  d_c2st_S1_F8  d_auc_S4_F4  d_auc_S1_F8
+  adult     0 euler1_smax1_rho7(nfe1)    15.158    0.373   euler1_smax1_rho7(nfe1)    15.158    0.373  dpmpp2m4_smax3_rho3(nfe4)     5.316    0.761 dpmpp2m8_smax5_rho7(nfe8)     2.068    0.912 dpmpp2m16_smax10_rho7(nfe16)      0.906     0.975     2.531    0.882     1.967    0.918     1.895    0.924  -12.627  -13.191   -3.421   -2.785    0.462     1.625         0.163        -0.030        0.009       -0.004
+  adult     1 euler1_smax1_rho7(nfe1)    17.043    0.251 dpmpp2m2_smax1_rho7(nfe2)    16.696    0.260  dpmpp2m4_smax5_rho7(nfe4)     4.722    0.755 dpmpp2m8_smax5_rho7(nfe8)     1.953    0.919  dpmpp2m16_smax5_rho3(nfe16)      1.194     0.962     2.462    0.887     2.215    0.898     2.070    0.912  -14.580  -14.481   -2.653   -2.260    0.509     1.268         0.157        -0.032        0.009       -0.001
+  adult     2 euler1_smax1_rho7(nfe1)    14.729    0.371 dpmpp2m2_smax1_rho7(nfe2)    14.610    0.373  dpmpp2m4_smax2_rho3(nfe4)     3.653    0.823 dpmpp2m8_smax2_rho3(nfe8)     2.475    0.871  dpmpp2m16_smax3_rho3(nfe16)      2.274     0.879     3.218    0.834     2.913    0.839     3.064    0.832  -11.511  -11.697   -0.589   -0.435    0.743     0.944         0.010        -0.037        0.002       -0.003
+default     0 euler1_smax1_rho7(nfe1)    20.699    0.412   euler2_smax1_rho7(nfe2)    20.580    0.415 dpmpp2m4_smax10_rho7(nfe4)     6.081    0.716 dpmpp2m8_smax5_rho3(nfe8)     2.506    0.903 dpmpp2m16_smax10_rho3(nfe16)      1.576     0.960     2.992    0.887     2.423    0.893     2.482    0.910  -17.706  -18.158   -3.599   -3.089    0.487     1.416         0.194        -0.016       -0.004       -0.004
+default     1 euler1_smax1_rho7(nfe1)    18.773    0.444 dpmpp2m2_smax1_rho7(nfe2)    18.393    0.464 dpmpp2m4_smax10_rho7(nfe4)     5.084    0.746 dpmpp2m8_smax5_rho7(nfe8)     2.287    0.943 dpmpp2m16_smax10_rho3(nfe16)      1.282     0.965     2.638    0.954     2.107    0.940     2.030    0.939  -16.136  -16.287   -3.054   -2.446    0.351     1.356         0.192         0.011        0.004       -0.004
+default     2 euler1_smax1_rho7(nfe1)    21.563    0.293 dpmpp2m2_smax1_rho7(nfe2)    21.392    0.294  dpmpp2m4_smax3_rho3(nfe4)     6.281    0.587 dpmpp2m8_smax5_rho7(nfe8)     3.475    0.799 dpmpp2m16_smax10_rho3(nfe16)      2.919     0.822     4.781    0.730     4.195    0.669     4.148    0.699  -16.782  -17.196   -2.133   -1.500    1.306     1.862         0.112        -0.069        0.002        0.004
+   news     0 euler1_smax1_rho7(nfe1)    21.290    0.209 dpmpp2m2_smax1_rho7(nfe2)    21.197    0.212  dpmpp2m4_smax2_rho3(nfe4)     6.768    0.636 dpmpp2m8_smax5_rho7(nfe8)     4.050    0.877    dpmpp2m8_smax5_rho7(nfe8)      4.050     0.877     5.703    0.819     5.872    0.808     6.056    0.802  -15.586  -15.326   -0.711   -1.064    1.653     1.653         0.167        -0.058          NaN          NaN
+   news     1 euler1_smax1_rho7(nfe1)    22.003    0.162 dpmpp2m2_smax1_rho7(nfe2)    21.905    0.162  dpmpp2m4_smax2_rho3(nfe4)     7.837    0.718 dpmpp2m8_smax5_rho7(nfe8)     3.070    0.957 dpmpp2m16_smax20_rho7(nfe16)      2.336     0.967     4.685    0.878     4.204    0.915     3.903    0.909  -17.319  -17.701   -3.934   -3.153    1.615     2.349         0.191        -0.080          NaN          NaN
+   news     2 euler1_smax1_rho7(nfe1)    20.105    0.187 dpmpp2m2_smax1_rho7(nfe2)    20.043    0.187  dpmpp2m4_smax2_rho3(nfe4)     6.496    0.667 dpmpp2m8_smax5_rho7(nfe8)     3.899    0.848 dpmpp2m16_smax10_rho3(nfe16)      3.711     0.843     5.103    0.853     4.843    0.836     4.954    0.828  -15.002  -15.200   -1.541   -1.393    1.204     1.392         0.161         0.005          NaN          NaN
+  comparison  cells  mean_diff  sd_over_cells  wins  sign_p
+     d_S1_F1      9    -15.250          2.089     9   0.004
+     d_S2_F2      9    -15.471          2.132     9   0.004
+     d_S4_F4      9     -2.404          1.238     9   0.004
+     d_S1_F4      9     -2.014          0.958     9   0.004
+     d_S1_F8      9      0.926          0.521     0   0.004
+    d_S1_F16      9      1.541          0.400     0   0.004
+d_c2st_S4_F4      9      0.150          0.058     9   0.004
+d_c2st_S1_F8      9     -0.034          0.031     2   0.180
+ d_auc_S4_F4      6      0.004          0.005     5   0.219
+ d_auc_S1_F8      6     -0.002          0.003     1   0.219
+cells: 9; headline threshold: S_1 < F_k in >= 8/9 cells
+READING: the 1-NFE student beats the best val-tuned teacher sampler up to 4 NFE.
+
+===== ct =====
+dataset  seed arm  ct1_shape    d1  ct2_shape    d2  ct4_shape    d4  plateau_exit  last2k_rel_drop  best_step  last_step  ict1_shape  ict2_shape  ict4_shape
+  adult     0  ct      9.043 6.512      8.305 6.338      8.281 6.387     15500.000            0.002      19250      20000         NaN         NaN         NaN
+  adult     1  ct      9.938 7.475      8.340 6.125      7.709 5.639     15250.000            0.003      19750      20000         NaN         NaN         NaN
+  adult     2  ct      7.182 3.964      6.614 3.701      6.332 3.268     14750.000            0.003      20000      20000         NaN         NaN         NaN
+default     0  ct     10.692 7.700      9.871 7.448      9.645 7.163     15250.000            0.005      20000      20000         NaN         NaN         NaN
+default     1  ct      9.336 6.698      8.394 6.287      8.287 6.257     14750.000            0.009      20000      20000         NaN         NaN         NaN
+default     2  ct     12.185 7.404      9.977 5.782      9.583 5.435     15750.000            0.004      20000      20000         NaN         NaN         NaN
+   news     0  ct      9.315 3.612      8.379 2.508      7.411 1.355     15500.000            0.007      20000      20000         NaN         NaN         NaN
+   news     1  ct     10.813 6.129      8.416 4.212      6.973 3.069     17500.000            0.003      19750      20000         NaN         NaN         NaN
+   news     2  ct      9.344 4.242      7.719 2.876      7.232 2.278     17750.000            0.008      20000      20000         NaN         NaN         NaN
+  adult     0 ict        NaN 6.846        NaN 6.676        NaN 6.515      5500.000            0.002      20000      20000       9.377       8.643       8.410
+default     0 ict        NaN 8.225        NaN 8.129        NaN 7.280     15250.000            0.004      20000      20000      11.217      10.552       9.762
+   news     0 ict        NaN 5.243        NaN 2.687        NaN 2.243           NaN            0.009      20000      20000      10.946       8.558       8.299
+comparison  cells  mean_diff  sd_over_cells  wins  sign_p
+        d1      9      5.971          1.610     0   0.004
+        d2      9      5.031          1.744     0   0.004
+        d4      9      4.539          2.070     0   0.004
+cells: 9; rule threshold 7/9 at j = 1 and 4, tolerance 0.25 pp
+READING (i): the teacher's ODE step is necessary; CT does not reach CD quality.
+ict (descriptive, seed-0 cells): adult: d1 +6.85 d2 +6.68 d4 +6.52; default: d1 +8.23 d2 +8.13 d4 +7.28; news: d1 +5.24 d2 +2.69 d4 +2.24
+
+===== N =====
+dataset  seed arm  N81_shape     d1  N82_shape     d2  N84_shape     d4 plateau_exit  last2k_rel_drop  best_step  last_step  N401_shape  N402_shape  N404_shape
+  adult     0  N8      3.590  1.060      3.646  1.679      2.694  0.799         3750            0.017      20000      20000         NaN         NaN         NaN
+default     0  N8      4.373  1.380      4.426  2.003      3.934  1.452         4000            0.014      20000      20000         NaN         NaN         NaN
+   news     0  N8      7.832  2.128      7.744  1.873      6.900  0.843         4000            0.012      20000      20000         NaN         NaN         NaN
+  adult     0 N40        NaN 15.374        NaN  0.465        NaN  0.062         None            0.085      20000      20000      17.905       2.432       1.956
+default     0 N40        NaN 15.041        NaN  0.908        NaN  0.190         None            0.074      20000      20000      18.033       3.331       2.672
+   news     0 N40        NaN 14.885        NaN -0.210        NaN -0.096         None            0.077      20000      20000      20.589       5.662       5.961
+comparison  cells  mean_diff  sd_over_cells  wins  sign_p arm
+        d1      3      1.523          0.548     0   0.250  N8
+        d2      3      1.851          0.163     0   0.250  N8
+        d4      3      1.031          0.365     0   0.250  N8
+        d1      3     15.100          0.250     0   0.250 N40
+        d2      3      0.388          0.563     1   1.000 N40
+        d4      3      0.052          0.143     1   1.000 N40
+cells: N8 3, N40 3 (seed 0 only; >= 2/3 rule)
+READING: no pre-registered pattern (N8 worse in 3/3, N40 same in 0/3, N40 better in 0/3); table shown.
+adult N40: UNCONVERGED at 20k (plateau exit None, last-2k drop 8.5%)
+default N40: UNCONVERGED at 20k (plateau exit None, last-2k drop 7.4%)
+news N40: UNCONVERGED at 20k (plateau exit None, last-2k drop 7.7%)
+
+===== long =====
+dataset  seed  arm  long1_shape     d1  long2_shape     d2  long4_shape     d4  plateau_exit  last2k_rel_drop  best_step  last_step
+  adult     0 long        2.260 -0.270        1.906 -0.061        1.861 -0.033          9500            0.000      39500      40000
+  adult     1 long        2.292 -0.170        2.252  0.036        2.021 -0.049          9500           -0.009      30250      40000
+  adult     2 long        3.195 -0.023        3.072  0.159        3.038 -0.026          9750           -0.009      29500      40000
+default     0 long        2.798 -0.194        2.384 -0.039        2.399 -0.084          9500           -0.003      29750      40000
+default     1 long        2.474 -0.164        1.991 -0.115        2.021 -0.008          9500           -0.008      28000      40000
+default     2 long        4.511 -0.270        3.925 -0.271        4.013 -0.135          9250            0.001      40000      40000
+   news     0 long        5.639 -0.064        5.760 -0.111        5.999 -0.058          9500           -0.006      33000      40000
+   news     1 long        4.372 -0.313        4.259  0.055        3.962  0.059          9500           -0.002      32000      40000
+   news     2 long        4.705 -0.398        4.700 -0.143        5.006  0.052          9500           -0.000      32250      40000
+comparison  cells  mean_diff  sd_over_cells  wins  sign_p
+        d1      9     -0.207          0.119     9   0.004
+        d2      9     -0.054          0.126     6   0.508
+        d4      9     -0.031          0.062     7   0.180
+cells: 9; best checkpoint past 20k in 9/9 cells
+READING: headline stays the 20k study; 40k is one ablation row.

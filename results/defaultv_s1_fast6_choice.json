@@ -1,0 +1,16 @@
+{
+ "6": {
+  "solver": "dpmpp2m",
+  "steps": 6,
+  "sigma_max": 5,
+  "rho": 7,
+  "nfe": 6,
+  "val_shape": 3.912083451779323,
+  "val_trend": 15.459246994197528,
+  "n_candidates": 133,
+  "valgrid": [
+   "results/defaultv_s1_fast_valgrid.jsonl",
+   "results/defaultv_s1_fast6_valgrid.jsonl"
+  ]
+ }
+}

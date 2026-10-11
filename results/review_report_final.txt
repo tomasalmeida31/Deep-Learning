@@ -1,0 +1,325 @@
+=== R1. Student vs val-tuned teacher F_k on train' (shape pp; negative = student better; 20 sampling seeds; 9 cells)
+dataset  seed   S1   S2   S4    F1  F1lo    F2  F2lo   F4   F6  F6_nfe   F8  F16  E99  E99_churn1
+  adult     0 2.53 1.97 1.89 15.16   NaN 15.16   NaN 5.32 3.14       6 2.07 0.91 0.76        0.72
+  adult     1 2.46 2.22 2.07 17.04 15.86 16.70 15.64 4.72 2.75       6 1.95 1.19 1.02        1.00
+  adult     2 3.22 2.91 3.06 14.73 13.48 14.61 13.34 3.65 2.95       6 2.48 2.27 2.34        2.34
+default     0 2.99 2.42 2.48 20.70   NaN 20.58   NaN 6.08 3.68       6 2.51 1.58 1.43        1.42
+default     1 2.64 2.11 2.03 18.77   NaN 18.39   NaN 5.08 3.46       6 2.29 1.28 1.12        1.10
+default     2 4.78 4.20 4.15 21.56   NaN 21.39   NaN 6.28 4.19       6 3.48 2.92 2.85        2.83
+   news     0 5.70 5.87 6.06 21.29 21.14 21.20 21.06 6.77 4.32       6 4.05 4.05 4.39        4.46
+   news     1 4.68 4.20 3.90 22.00   NaN 21.90   NaN 7.84 4.47       6 3.07 2.34 2.47        2.50
+   news     2 5.10 4.84 4.95 20.11   NaN 20.04   NaN 6.50 4.52       6 3.90 3.71 3.98        4.04
+
+-- paired over 9 cells
+                                            comparison  cells     mean  sd_cells  ci95_lo  ci95_hi      min      max  wins  sign_p
+                                       S1-F1 (E1 grid)      9 -15.2500    2.0894 -16.8560 -13.6439 -17.7063 -11.5110     9  0.0039
+S1-F1_best (incl. sub-1 sigma_max where it won on val)      9 -14.9638    2.4491 -16.8463 -13.0812 -17.7063 -10.2612     9  0.0039
+                                            S2-F2_best      9 -15.1980    2.5024 -17.1214 -13.2745 -18.1576 -10.4302     9  0.0039
+                                                 S4-F4      9  -2.4039    1.2381  -3.3556  -1.4521  -3.9340  -0.5892     9  0.0039
+                                                 S1-F4      9  -2.0139    0.9579  -2.7502  -1.2776  -3.1528  -0.4349     9  0.0039
+                                      S1-F6 (measured)      9   0.0717    0.7328  -0.4916   0.6350  -0.8256   1.3866     4  1.0000
+                                                 S1-F8      9   0.9255    0.5209   0.5251   1.3259   0.3509   1.6531     0  0.0039
+                                                S1-F16      9   1.5405    0.3998   1.2332   1.8479   0.9437   2.3490     0  0.0039
+                                                S1-E99      9   1.5282    0.4085   1.2142   1.8422   0.8779   2.2141     0  0.0039
+                                                S2-E99      9   1.1534    0.3468   0.8868   1.4200   0.5726   1.7338     0  0.0039
+                                                S4-E99      9   1.1383    0.2874   0.9174   1.3592   0.7237   1.6685     0  0.0039
+                                         S1-E99_churn1      9   1.5215    0.4209   1.1980   1.8450   0.8809   2.1855     0  0.0039
+                                 E99_churn1-E99_churn0      9   0.0067    0.0405  -0.0245   0.0378  -0.0405   0.0763     6  0.5078
+                           S1_trend-F4_trend (6 cells)      6  -1.4760    1.6999  -3.2600   0.3079  -4.1746   0.0409     5  0.2188
+                           S1_trend-F8_trend (6 cells)      6   0.8852    0.5342   0.3246   1.4457   0.1991   1.4985     0  0.0312
+
+-- per-dataset means (n = 3 training seeds each; the unit the sign test cannot see)
+        S1-F4             S1-F6            S1-F8           S1-E99           S4-F4            
+         mean   min   max  mean   min  max  mean  min  max   mean  min  max  mean   min   max
+dataset                                                                                      
+adult   -1.83 -2.79 -0.43 -0.21 -0.61 0.27  0.57 0.46 0.74   1.36 0.88 1.77 -2.22 -3.42 -0.59
+default -2.35 -3.09 -1.50 -0.31 -0.83 0.59  0.71 0.35 1.31   1.67 1.52 1.93 -2.93 -3.60 -2.13
+news    -1.87 -3.15 -1.06  0.73  0.22 1.39  1.49 1.20 1.65   1.55 1.12 2.21 -2.06 -3.93 -0.71
+  dataset-level all-same-sign exact sign test, n = 3: two-sided p = 0.250
+
+-- fresh-sampling-seed sensitivity
+                      comparison  cells    mean  sd_cells  ci95_lo  ci95_hi     min     max  wins  sign_p
+S1-F4 [sampling seeds 5-19 only]      9 -2.0152    0.9595  -2.7527  -1.2776 -3.1633 -0.4302     9  0.0039
+S1-F8 [sampling seeds 5-19 only]      9  0.9245    0.5196   0.5252   1.3239  0.3482  1.6549     0  0.0039
+S4-F4 [sampling seeds 5-19 only]      9 -2.4033    1.2411  -3.3573  -1.4493 -3.9374 -0.5703     9  0.0039
+
+-- F_1 val shape vs sigma_max (5 val seeds; the E1 grid edge was sigma_max = 1)
+  adult s0: 0.3:21.80, 0.5:17.21, 0.7:15.73, 1.0:15.70, 2.0:20.71, 3.0:25.50, 5.0:30.65, 10.0:36.16, 20.0:38.91, 80.0:39.74  -> best sigma_max 1.0 (beats E1: False)
+  adult s1: 0.3:23.13, 0.5:17.30, 0.7:15.92, 1.0:17.08, 2.0:25.02, 3.0:31.19, 5.0:37.12, 10.0:40.59, 20.0:41.61, 80.0:42.17  -> best sigma_max 0.7 (beats E1: True)
+  adult s2: 0.3:18.48, 0.5:14.57, 0.7:13.70, 1.0:14.83, 2.0:21.12, 3.0:24.95, 5.0:28.91, 10.0:33.34, 20.0:36.02, 80.0:37.20  -> best sigma_max 0.7 (beats E1: True)
+  default s0: 0.3:29.94, 0.5:25.14, 0.7:22.80, 1.0:21.63, 2.0:24.79, 3.0:29.85, 5.0:36.81, 10.0:44.33, 20.0:48.96, 80.0:52.25  -> best sigma_max 1.0 (beats E1: False)
+  default s1: 0.3:28.49, 0.5:22.58, 0.7:20.20, 1.0:19.41, 2.0:24.30, 3.0:29.55, 5.0:35.79, 10.0:42.74, 20.0:47.22, 80.0:50.03  -> best sigma_max 1.0 (beats E1: False)
+  default s2: 0.3:31.09, 0.5:26.77, 0.7:23.63, 1.0:22.42, 2.0:26.40, 3.0:31.73, 5.0:38.20, 10.0:44.21, 20.0:47.60, 80.0:50.38  -> best sigma_max 1.0 (beats E1: False)
+  news s0: 0.3:26.92, 0.5:22.64, 0.7:21.22, 1.0:21.35, 2.0:27.17, 3.0:31.82, 5.0:36.81, 10.0:42.51, 20.0:45.66, 80.0:48.01  -> best sigma_max 0.7 (beats E1: True)
+  news s1: 0.3:28.86, 0.5:24.18, 0.7:22.26, 1.0:22.00, 2.0:26.40, 3.0:30.92, 5.0:36.16, 10.0:41.62, 20.0:45.73, 80.0:49.63  -> best sigma_max 1.0 (beats E1: False)
+  news s2: 0.3:29.31, 0.5:22.88, 0.7:20.44, 1.0:20.15, 2.0:24.54, 3.0:29.09, 5.0:35.48, 10.0:42.38, 20.0:46.75, 80.0:49.78  -> best sigma_max 1.0 (beats E1: False)
+
+=== R2. Utility: effect sizes with uncertainty (not equivalence tests; margins are the group's to justify)
+dataset  seed  nfe  auroc_s  auroc_s_sd  auroc_e99  auroc_e99_sd  auroc_F4  auroc_F8  auroc_F16  r2log_s  r2log_s_sd  r2log_e99  r2log_e99_sd  r2log_real
+  adult     0    1   0.9032      0.0008     0.9092        0.0024    0.8950    0.9068     0.9089      NaN         NaN        NaN           NaN         NaN
+  adult     0    2   0.9051      0.0012     0.9092        0.0024    0.8950    0.9068     0.9089      NaN         NaN        NaN           NaN         NaN
+  adult     0    4   0.9036      0.0029     0.9092        0.0024    0.8950    0.9068     0.9089      NaN         NaN        NaN           NaN         NaN
+  adult     1    1   0.9051      0.0027     0.9081        0.0027    0.8986    0.9062     0.9088      NaN         NaN        NaN           NaN         NaN
+  adult     1    2   0.9061      0.0019     0.9081        0.0027    0.8986    0.9062     0.9088      NaN         NaN        NaN           NaN         NaN
+  adult     1    4   0.9073      0.0010     0.9081        0.0027    0.8986    0.9062     0.9088      NaN         NaN        NaN           NaN         NaN
+  adult     2    1   0.9026      0.0015     0.9064        0.0030    0.8985    0.9058     0.9064      NaN         NaN        NaN           NaN         NaN
+  adult     2    2   0.8991      0.0033     0.9064        0.0030    0.8985    0.9058     0.9064      NaN         NaN        NaN           NaN         NaN
+  adult     2    4   0.9002      0.0038     0.9064        0.0030    0.8985    0.9058     0.9064      NaN         NaN        NaN           NaN         NaN
+default     0    1   0.7556      0.0045     0.7592        0.0042    0.7559    0.7592     0.7594      NaN         NaN        NaN           NaN         NaN
+default     0    2   0.7527      0.0075     0.7592        0.0042    0.7559    0.7592     0.7594      NaN         NaN        NaN           NaN         NaN
+default     0    4   0.7520      0.0077     0.7592        0.0042    0.7559    0.7592     0.7594      NaN         NaN        NaN           NaN         NaN
+default     1    1   0.7542      0.0021     0.7587        0.0050    0.7522    0.7578     0.7575      NaN         NaN        NaN           NaN         NaN
+default     1    2   0.7554      0.0046     0.7587        0.0050    0.7522    0.7578     0.7575      NaN         NaN        NaN           NaN         NaN
+default     1    4   0.7561      0.0047     0.7587        0.0050    0.7522    0.7578     0.7575      NaN         NaN        NaN           NaN         NaN
+default     2    1   0.7537      0.0036     0.7517        0.0074    0.7503    0.7497     0.7517      NaN         NaN        NaN           NaN         NaN
+default     2    2   0.7501      0.0056     0.7517        0.0074    0.7503    0.7497     0.7517      NaN         NaN        NaN           NaN         NaN
+default     2    4   0.7525      0.0049     0.7517        0.0074    0.7503    0.7497     0.7517      NaN         NaN        NaN           NaN         NaN
+   news     0    1      NaN         NaN        NaN           NaN       NaN       NaN        NaN   0.1064      0.0086     0.1220        0.0076      0.1602
+   news     0    2      NaN         NaN        NaN           NaN       NaN       NaN        NaN   0.0995      0.0038     0.1220        0.0076      0.1602
+   news     0    4      NaN         NaN        NaN           NaN       NaN       NaN        NaN   0.0992      0.0088     0.1220        0.0076      0.1602
+   news     1    1      NaN         NaN        NaN           NaN       NaN       NaN        NaN   0.1233      0.0060     0.1376        0.0096      0.1602
+   news     1    2      NaN         NaN        NaN           NaN       NaN       NaN        NaN   0.1214      0.0082     0.1376        0.0096      0.1602
+   news     1    4      NaN         NaN        NaN           NaN       NaN       NaN        NaN   0.1187      0.0072     0.1376        0.0096      0.1602
+   news     2    1      NaN         NaN        NaN           NaN       NaN       NaN        NaN   0.1116      0.0050     0.1137        0.0059      0.1602
+   news     2    2      NaN         NaN        NaN           NaN       NaN       NaN        NaN   0.0996      0.0072     0.1137        0.0059      0.1602
+   news     2    4      NaN         NaN        NaN           NaN       NaN       NaN        NaN   0.0963      0.0071     0.1137        0.0059      0.1602
+
+-- paired utility differences: mean, sd over cells, 95% t-CI, range, wins, sign p
+                     comparison  cells    mean  sd_cells  ci95_lo  ci95_hi     min     max  wins  sign_p
+         AUROC S1-E99 (6 cells)      6 -0.0032    0.0027  -0.0060  -0.0003 -0.0060  0.0020     1  0.2188
+          AUROC S1-F8 (6 cells)      6 -0.0019    0.0030  -0.0050   0.0013 -0.0037  0.0040     1  0.2188
+          AUROC S1-F4 (6 cells)      6  0.0040    0.0031   0.0008   0.0072 -0.0003  0.0082     5  0.2188
+news R2(log1p) S1-E99 (3 cells)      3 -0.0107    0.0074  -0.0291   0.0078 -0.0157 -0.0021     0  0.2500
+         AUROC S2-E99 (6 cells)      6 -0.0041    0.0023  -0.0066  -0.0017 -0.0073 -0.0016     0  0.0312
+          AUROC S2-F8 (6 cells)      6 -0.0028    0.0031  -0.0061   0.0004 -0.0067  0.0004     1  0.2188
+          AUROC S2-F4 (6 cells)      6  0.0030    0.0050  -0.0023   0.0083 -0.0032  0.0101     4  0.6875
+news R2(log1p) S2-E99 (3 cells)      3 -0.0176    0.0044  -0.0284  -0.0068 -0.0225 -0.0141     0  0.2500
+         AUROC S4-E99 (6 cells)      6 -0.0036    0.0032  -0.0070  -0.0002 -0.0072  0.0008     1  0.2188
+          AUROC S4-F8 (6 cells)      6 -0.0023    0.0039  -0.0063   0.0018 -0.0073  0.0028     2  0.6875
+          AUROC S4-F4 (6 cells)      6  0.0035    0.0048  -0.0015   0.0085 -0.0039  0.0087     5  0.2188
+news R2(log1p) S4-E99 (3 cells)      3 -0.0197    0.0028  -0.0267  -0.0127 -0.0228 -0.0174     0  0.2500
+  within-cell sampling-seed sd of AUROC (10 seeds): student median 0.0035, E99 median 0.0036; E99 seed spread across training seeds per dataset: adult 0.0014, default 0.0042
+  news R2(log1p): real 0.160; within-cell sd student median 0.0072, E99 median 0.0076
+
+=== R3. DCR (fraction of synthetic rows closer to train' than to the shipped test split; 0.5 ideal)
+                          copies    dcr   ties
+space                       full   full   full
+dataset seed what                             
+adult   0    E99          0.0000 0.5109 0.0003
+             F16          0.0000 0.5098 0.0003
+             F4           0.0000 0.5057 0.0003
+             F8           0.0000 0.5098 0.0003
+             S1           0.0000 0.5031 0.0003
+             S2           0.0000 0.5048 0.0001
+             S4           0.0000 0.5074 0.0003
+             real(train') 0.5508 0.7764 0.0012
+             val          0.0006 0.4873 0.0009
+        1    E99          0.0000 0.5076 0.0004
+             F16          0.0000 0.5087 0.0003
+             F4           0.0000 0.5065 0.0004
+             F8           0.0000 0.5123 0.0003
+             S1           0.0000 0.5032 0.0002
+             S2           0.0000 0.5033 0.0003
+             S4           0.0000 0.5003 0.0003
+             real(train') 0.5508 0.7764 0.0012
+             val          0.0006 0.4873 0.0012
+        2    E99          0.0000 0.5013 0.0003
+             F16          0.0000 0.5021 0.0002
+             F4           0.0000 0.4954 0.0001
+             F8           0.0000 0.5011 0.0002
+             S1           0.0000 0.4961 0.0002
+             S2           0.0000 0.4971 0.0002
+             S4           0.0000 0.4969 0.0001
+             real(train') 0.5508 0.7764 0.0012
+             val          0.0006 0.4873 0.0012
+default 0    E99          0.0001 0.5087 0.0001
+             F16          0.0001 0.5080 0.0001
+             F4           0.0000 0.5090 0.0001
+             F8           0.0000 0.5072 0.0001
+             S1           0.0000 0.5083 0.0002
+             S2           0.0000 0.5031 0.0001
+             S4           0.0000 0.5065 0.0002
+             real(train') 0.1176 0.5556 0.0002
+             val          0.0000 0.4967 0.0007
+        1    E99          0.0001 0.5057 0.0002
+             F16          0.0001 0.5066 0.0002
+             F4           0.0000 0.5075 0.0002
+             F8           0.0000 0.5052 0.0001
+             S1           0.0001 0.5033 0.0001
+             S2           0.0000 0.5093 0.0002
+             S4           0.0000 0.5035 0.0001
+             real(train') 0.1176 0.5556 0.0002
+             val          0.0000 0.4967 0.0007
+        2    E99          0.0000 0.5089 0.0001
+             F16          0.0001 0.5090 0.0001
+             F4           0.0000 0.5017 0.0001
+             F8           0.0001 0.5067 0.0001
+             S1           0.0000 0.5098 0.0001
+             S2           0.0000 0.5086 0.0001
+             S4           0.0000 0.5053 0.0002
+             real(train') 0.1176 0.5556 0.0002
+             val          0.0000 0.4967 0.0007
+news    0    E99          0.0000 0.5028 0.0000
+             F16          0.0000 0.5022 0.0000
+             F4           0.0000 0.4930 0.0000
+             F8           0.0000 0.5022 0.0000
+             S1           0.0000 0.4983 0.0000
+             S2           0.0000 0.5015 0.0000
+             S4           0.0000 0.5038 0.0000
+             real(train') 0.1264 0.5600 0.0000
+             val          0.0000 0.4914 0.0000
+        1    E99          0.0000 0.5014 0.0000
+             F16          0.0000 0.5031 0.0000
+             F4           0.0000 0.4974 0.0000
+             F8           0.0000 0.4988 0.0000
+             S1           0.0000 0.4977 0.0000
+             S2           0.0000 0.5009 0.0000
+             S4           0.0000 0.5007 0.0000
+             real(train') 0.1264 0.5600 0.0000
+             val          0.0000 0.4914 0.0000
+        2    E99          0.0000 0.4979 0.0000
+             F16          0.0000 0.4995 0.0000
+             F4           0.0000 0.5010 0.0000
+             F8           0.0000 0.4996 0.0000
+             S1           0.0000 0.4978 0.0000
+             S2           0.0000 0.5005 0.0000
+             S4           0.0000 0.4984 0.0000
+             real(train') 0.1264 0.5600 0.0000
+             val          0.0000 0.4914 0.0000
+
+-- mean over cells
+                      dcr   ties  copies
+space what                              
+full  E99          0.5050 0.0002  0.0000
+      F16          0.5054 0.0001  0.0000
+      F4           0.5019 0.0001  0.0000
+      F8           0.5048 0.0001  0.0000
+      S1           0.5020 0.0001  0.0000
+      S2           0.5032 0.0001  0.0000
+      S4           0.5025 0.0001  0.0000
+      real(train') 0.6307 0.0005  0.2649
+      val          0.4918 0.0006  0.0002
+   {'comparison': '|DCR-0.5| S1 - E99 [full]', 'cells': 9, 'mean': -0.0013, 'sd_cells': 0.0032, 'ci95_lo': -0.0037, 'ci95_hi': 0.0012, 'min': -0.0078, 'max': 0.0027, 'wins': 5, 'sign_p': 1.0}
+   {'comparison': '|DCR-0.5| S2 - E99 [full]', 'cells': 9, 'mean': -0.0016, 'sd_cells': 0.0032, 'ci95_lo': -0.0041, 'ci95_hi': 0.0009, 'min': -0.006, 'max': 0.0036, 'wins': 7, 'sign_p': 0.1797}
+   {'comparison': '|DCR-0.5| S4 - E99 [full]', 'cells': 9, 'mean': -0.0019, 'sd_cells': 0.0028, 'ci95_lo': -0.004, 'ci95_hi': 0.0002, 'min': -0.0073, 'max': 0.0018, 'wins': 7, 'sign_p': 0.1797}
+
+=== R4. C2ST with seeded CV splits (3 splits per file; c2st_mean) vs the historical unseeded values
+what            E99    F16     F4     F6     F8     S1     S2     S4
+dataset seed                                                        
+adult   0    0.9907 0.9752 0.7598 0.8729 0.9120 0.8822 0.9174 0.9252
+        1    0.9754 0.9632 0.7546 0.8709 0.9192 0.8850 0.8976 0.9121
+        2    0.8781 0.8801 0.8239 0.8571 0.8725 0.8330 0.8397 0.8320
+default 0    0.9691 0.9606 0.7157 0.8817 0.9034 0.8886 0.8925 0.9080
+        1    0.9851 0.9637 0.7463 0.8694 0.9418 0.9548 0.9405 0.9429
+        2    0.8075 0.8217 0.5866 0.7542 0.7997 0.7300 0.6695 0.6984
+news    0    0.8294 0.8751 0.6368 0.8571 0.8751 0.8193 0.8082 0.8019
+        1    0.9582 0.9669 0.7164 0.9216 0.9578 0.8779 0.9167 0.9094
+        2    0.8416 0.8424 0.6675 0.8239 0.8478 0.8528 0.8363 0.8277
+  CV-split sd (within file, 3 splits) median 0.0029; sampling-seed sd (within cell) median 0.0046
+
+-- paired C2ST
+                            comparison  cells    mean  sd_cells  ci95_lo  ci95_hi     min     max  wins  sign_p
+ C2ST S4-F4 [seeded] (higher = better)      9  0.1500    0.0592   0.1045   0.1955  0.0081  0.1966     9  0.0039
+ C2ST S1-F8 [seeded] (higher = better)      9 -0.0340    0.0317  -0.0583  -0.0096 -0.0799  0.0130     2  0.1797
+ C2ST S1-F6 [seeded] (higher = better)      9  0.0016    0.0402  -0.0293   0.0326 -0.0437  0.0854     5  1.0000
+C2ST S1-E99 [seeded] (higher = better)      9 -0.0568    0.0403  -0.0878  -0.0258 -0.1085  0.0113     1  0.0391
+C2ST S2-E99 [seeded] (higher = better)      9 -0.0574    0.0393  -0.0876  -0.0272 -0.1380 -0.0052     0  0.0039
+C2ST S4-E99 [seeded] (higher = better)      9 -0.0530    0.0270  -0.0738  -0.0323 -0.1090 -0.0138     0  0.0039
+      C2ST S4-F4 [historical unseeded]      9  0.1496    0.0583   0.1048   0.1945  0.0096  0.1944     9  0.0039
+      C2ST S1-F8 [historical unseeded]      9 -0.0339    0.0312  -0.0579  -0.0099 -0.0795  0.0111     2  0.1797
+
+=== R5. Pair excess by type on ONE metric (binned contingency TVD, real-defined 10 quantile bins) vs SDMetrics' mixed metrics
+                             S1_err  S1_dep  S4_err  S4_dep  F4_err  F4_dep  F8_err  F8_dep  E99_err  E99_dep  S1-E99_err  S1-E99_dep  F4-E99_err
+dataset pair_type                                                                                                                                
+adult   cat-cat                5.79    2.96    5.01    2.55    8.25    3.09    4.44    2.21     3.22     1.81        2.57        1.15        5.04
+        cat-cat [SDMetrics]    5.79     NaN     NaN     NaN     NaN     NaN     NaN     NaN     3.22      NaN        2.57         NaN         NaN
+        num-cat                5.72    2.26    4.97    2.07    9.06    2.64    4.47    1.71     3.04     1.41        2.68        0.85        6.02
+        num-cat [SDMetrics]    6.80     NaN     NaN     NaN     NaN     NaN     NaN     NaN     3.91      NaN        2.89         NaN         NaN
+        num-num                5.63    1.37    4.83    1.37   10.01    1.60    4.69    1.21     2.89     1.04        2.74        0.33        7.12
+        num-num [SDMetrics]    0.58     NaN     NaN     NaN     NaN     NaN     NaN     NaN     0.45      NaN        0.13         NaN         NaN
+default cat-cat                6.18    2.99    5.01    1.92    9.01    2.83    4.25    1.96     2.95     1.53        3.23        1.46        6.06
+        cat-cat [SDMetrics]    6.18     NaN     NaN     NaN     NaN     NaN     NaN     NaN     2.95      NaN        3.23         NaN         NaN
+        num-cat                7.22    3.43    6.25    3.37   10.67    4.25    5.77    2.74     4.29     2.26        2.92        1.18        6.37
+        num-cat [SDMetrics]    8.67     NaN     NaN     NaN     NaN     NaN     NaN     NaN     7.60      NaN        1.08         NaN         NaN
+        num-num               12.93   10.29   13.76   12.21   15.90   11.22    9.19    6.66     7.22     5.72        5.70        4.58        8.67
+        num-num [SDMetrics]    1.98     NaN     NaN     NaN     NaN     NaN     NaN     NaN     1.28      NaN        0.70         NaN         NaN
+news    cat-cat                7.69    3.13    7.60    2.97    8.51    2.90    4.91    2.81     4.70     2.76        2.99        0.36        3.81
+        cat-cat [SDMetrics]    7.69     NaN     NaN     NaN     NaN     NaN     NaN     NaN     4.70      NaN        2.99         NaN         NaN
+        num-cat                9.63    4.30    8.96    3.94   11.82    4.30    6.86    3.50     6.57     3.23        3.06        1.07        5.25
+        num-cat [SDMetrics]   11.46     NaN     NaN     NaN     NaN     NaN     NaN     NaN     7.43      NaN        4.03         NaN         NaN
+        num-num               10.81    4.51   10.11    4.39   14.64    5.14    8.37    3.76     8.30     3.51        2.52        1.00        6.34
+        num-num [SDMetrics]    1.67     NaN     NaN     NaN     NaN     NaN     NaN     NaN     1.41      NaN        0.26         NaN         NaN
+
+-- target involvement (common metric, S1-E99 err):
+dataset  involves_target
+adult    False             2.74
+         True              2.04
+default  False             4.11
+         True              1.50
+news     False             2.61
+         True              1.46
+
+-- tails: numerical columns, S1 vs E99 (mean over 10 seeds): quantile error at p99 (in IQR units) and synthetic mass above the real p99 (0.01 ideal)
+  adult: top columns by S1-E99 marginal TVD excess
+                excess_tv  S1_q99  E99_q99  S1_hi99  E99_hi99  S1_maxr  E99_maxr
+column                                                                          
+education.num       6.052   0.192    0.011    0.000     0.000    1.000     1.000
+hours.per.week      2.131   0.221    0.753    0.010     0.008    1.000     1.000
+age                 0.909   0.087    0.074    0.011     0.009    1.000     1.000
+fnlwgt              0.358   0.365    0.074    0.013     0.010    0.986     0.966
+capital.gain        0.000   0.324    0.000    0.007     0.006    1.000     1.000
+capital.loss        0.000   0.016    0.007    0.009     0.007    0.918     0.890
+  default: top columns by S1-E99 marginal TVD excess
+          excess_tv  S1_q99  E99_q99  S1_hi99  E99_hi99  S1_maxr  E99_maxr
+column                                                                    
+PAY_AMT3      4.868   3.445    3.282    0.007     0.007    0.657     0.808
+PAY_AMT2      4.564   1.401    2.301    0.009     0.009    0.939     0.878
+PAY_AMT4      3.174   2.371    3.507    0.010     0.007    0.975     0.892
+PAY_AMT1      2.854   2.427    1.478    0.008     0.009    0.961     0.954
+PAY_AMT5      1.654   2.560    2.220    0.008     0.008    0.928     0.940
+PAY_AMT6      1.597   1.908    2.485    0.010     0.010    0.953     0.987
+  news: top columns by S1-E99 marginal TVD excess
+                           excess_tv  S1_q99  E99_q99  S1_hi99  E99_hi99  S1_maxr  E99_maxr
+column                                                                                     
+ abs_title_subjectivity        8.744   0.000    0.000    0.000     0.000    1.000     1.000
+ kw_min_min                    5.978   0.000    0.000    0.000     0.000    0.648     0.576
+ kw_max_max                    5.444   0.000    0.000    0.000     0.000    1.000     1.000
+ min_negative_polarity         5.237   0.000    0.000    0.000     0.000      NaN       NaN
+ title_sentiment_polarity      5.016   0.000    0.000    0.000     0.000    1.000     1.000
+ num_videos                    4.930   1.874    2.347    0.009     0.007    0.930     0.871
+
+=== R6. Determinism records (|re-scored - stored| shape, pp) for every cell
+dataset  seed  percol_S1  percol_E99  rescore_S1  rescore_E99
+  adult     0   0.00e+00    0.00e+00    0.00e+00     0.00e+00
+  adult     1   0.00e+00    0.00e+00    0.00e+00     0.00e+00
+  adult     2   0.00e+00    0.00e+00    0.00e+00     0.00e+00
+default     0   5.25e-02    0.00e+00    5.25e-02     0.00e+00
+default     1   3.86e-02    4.29e-03    3.86e-02     4.29e-03
+default     2   0.00e+00    0.00e+00    0.00e+00     0.00e+00
+   news     0   0.00e+00    0.00e+00    0.00e+00     0.00e+00
+   news     1   0.00e+00    0.00e+00    0.00e+00     0.00e+00
+   news     2   0.00e+00    0.00e+00    0.00e+00     0.00e+00
+
+=== R7. Latent space facts (from the VAE checkpoints actually used)
+  adult: 15 columns -> 16 tokens x 4 = 64-d latent (CLS token + one per column); raw var 2.004; after (z-mean)/2: std 0.448 (per-dim 0.006..0.981) vs sigma_data = 0.5
+  default: 24 columns -> 25 tokens x 4 = 100-d latent (CLS token + one per column); raw var 1.519; after (z-mean)/2: std 0.393 (per-dim 0.005..0.805) vs sigma_data = 0.5
+  news: 48 columns -> 49 tokens x 4 = 196-d latent (CLS token + one per column); raw var 1.449; after (z-mean)/2: std 0.370 (per-dim 0.008..1.033) vs sigma_data = 0.5
+
+=== R8. Tuning-budget disclosure
+  student recipe arms trained on adult s0 before the recipe was frozen (pilot + sweeps): 19: ['cdA_s0', 'cdB_s0', 'cd_s0', 'sw2_N18_mu0.995_10k_s0', 'sw2_N18_mu0.995_20k_s0', 'sw2_N18_mu0.99_20k_s0', 'sw3_N18_mu0.998_10k_s0', 'sw3_N18_mu0.999_10k_s0', 'sw4_N18_mu0.998_20k_s0', 'sw4_N18_mu0.999_20k_s0', 'sw_N18_mu0.95_s0', 'sw_N18_mu0.99_s0', 'sw_N18_mu0.9_s0', 'sw_N40_mu0.95_s0', 'sw_N40_mu0.99_s0', 'sw_N40_mu0.9_s0', 'sw_N8_mu0.95_s0', 'sw_N8_mu0.99_s0', 'sw_N8_mu0.9_s0']
+  ablation arms on adult s0 (after the freeze): ct, ict, N8, N40, long
+  teacher sampler search per cell: E1 196 configs (+ 9 sub-1 configs, + 63 six-NFE configs) x 5 val seeds; student tau search per cell: 1 / 7 / 13 schedules at 1 / 2 / 4 NFE x 5 val seeds
+
+=== R9. Churn: the authors' shipped sampler uses S_churn = 1; E99 here is churn 0 (deterministic). Shape, 20 seeds
+dataset  seed   E99  E99_churn1   diff
+  adult     0 0.762       0.721 -0.041
+  adult     1 1.024       1.003 -0.021
+  adult     2 2.340       2.337 -0.003
+default     0 1.431       1.424 -0.007
+default     1 1.118       1.097 -0.021
+default     2 2.846       2.831 -0.015
+   news     0 4.388       4.464  0.076
+   news     1 2.470       2.499  0.029
+   news     2 3.979       4.043  0.064
+
+written results/review_*.csv, results/review_summary.json

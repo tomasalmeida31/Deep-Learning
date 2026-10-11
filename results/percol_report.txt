@@ -1,0 +1,49 @@
+dataset    col_type is_target    d1    d4  dT15        unit      card pair_type
+  adult categorical     False  1.34  1.07  0.89      column       NaN       NaN
+  adult categorical      True  0.86  0.20  0.78      column       NaN       NaN
+  adult   numerical     False  1.47  0.95  3.46      column       NaN       NaN
+default categorical     False  1.89  1.40  0.46      column       NaN       NaN
+default categorical      True -0.72  0.45  0.54      column       NaN       NaN
+default   numerical     False  1.71  0.93  3.94      column       NaN       NaN
+   news categorical     False  2.60  2.55  1.23      column       NaN       NaN
+   news   numerical     False  1.52  1.32  2.98      column       NaN       NaN
+   news   numerical      True  0.62  0.60  6.25      column       NaN       NaN
+  adult         NaN       NaN  0.45  0.31  0.57 cardinality     cat 2       NaN
+  adult         NaN       NaN  1.14  0.94  0.68 cardinality  cat 3-10       NaN
+  adult         NaN       NaN  2.06  1.45  1.36 cardinality   cat >10       NaN
+  adult         NaN       NaN  1.47  0.95  3.46 cardinality numerical       NaN
+default         NaN       NaN -0.54  0.31  0.79 cardinality     cat 2       NaN
+default         NaN       NaN  1.40  0.91  0.45 cardinality  cat 3-10       NaN
+default         NaN       NaN  2.93  2.20  0.31 cardinality   cat >10       NaN
+default         NaN       NaN  1.71  0.93  3.94 cardinality numerical       NaN
+   news         NaN       NaN  2.60  2.55  1.23 cardinality  cat 3-10       NaN
+   news         NaN       NaN  1.50  1.30  3.05 cardinality numerical       NaN
+  adult         NaN       NaN  2.57  1.79  1.43        pair       NaN   cat-cat
+  adult         NaN       NaN  2.89  2.04  4.54        pair       NaN   num-cat
+  adult         NaN       NaN  0.13  0.20  0.08        pair       NaN   num-num
+default         NaN       NaN  3.23  2.06  0.55        pair       NaN   cat-cat
+default         NaN       NaN  1.08 -1.94 -0.62        pair       NaN   num-cat
+default         NaN       NaN  0.70  1.11  0.58        pair       NaN   num-num
+   news         NaN       NaN  2.99  2.90  1.25        pair       NaN   cat-cat
+   news         NaN       NaN  4.03  2.41  2.67        pair       NaN   num-cat
+   news         NaN       NaN  0.26  0.29  0.31        pair       NaN   num-num
+
+[adult] (a) top 20% of columns (3) carry 46% of positive sum d1 -> DIFFUSE
+     worst columns: education.num (numerical) d1 +4.02; occupation (categorical) d1 +3.33; education (categorical) d1 +2.13; capital.gain (numerical) d1 +1.62; hours.per.week (numerical) d1 +1.55
+     (b) mean d1 categorical +1.29 vs numerical +1.47
+     (c) Spearman(d1, dT15) over columns = 0.27 -> intermediate
+
+[default] (a) top 20% of columns (5) carry 43% of positive sum d1 -> DIFFUSE
+     worst columns: PAY_0 (categorical) d1 +4.16; PAY_3 (categorical) d1 +3.80; PAY_AMT5 (numerical) d1 +3.40; PAY_AMT2 (numerical) d1 +3.38; PAY_AMT6 (numerical) d1 +3.15
+     (b) mean d1 categorical +1.63 vs numerical +1.71
+     (c) Spearman(d1, dT15) over columns = 0.01 -> different error mode (< 0.2)
+
+[news] (a) top 20% of columns (10) carry 58% of positive sum d1 -> CONCENTRATED
+     worst columns:  kw_min_max (numerical) d1 +6.56;  kw_min_min (numerical) d1 +6.03;  max_positive_polarity (numerical) d1 +5.85;  abs_title_subjectivity (numerical) d1 +5.70;  num_videos (numerical) d1 +5.28
+     (b) mean d1 categorical +2.60 vs numerical +1.50
+     (c) Spearman(d1, dT15) over columns = -0.18 -> different error mode (< 0.2)
+
+(b) type statement allowed: NO (1 datasets with |cat - num| >= 0.5 pp in the same direction)
+(c) "the student fails where the teacher's coarse sampler fails" requires rho >= 0.5 on all three datasets (see above).
+(d) pairs: see unit == pair rows (default shown as descriptive only; its trend metric is excluded).
+written results/percol_columns.csv, percol_pairs.csv, percol_bytype.csv, percol_fig.png

@@ -1,0 +1,13 @@
+slurm/fast_one.sbatch|adult|results/adultv_s[012]_FAST_DONE:3
+slurm/fast_one.sbatch|default|results/defaultv_s[012]_FAST_DONE:3
+slurm/fast_one.sbatch|news|results/newsv_s[012]_FAST_DONE:3
+slurm/percol_one.sbatch||results/*v_s[012]_PERCOL_DONE:9
+slurm/ablate_one.sbatch|adult 0 ct ict N8 N40 long|results/adultv_s0_ABLATE_ct_ict_N8_N40_long_DONE:1
+slurm/ablate_one.sbatch|default 0 ct ict N8 N40 long|results/defaultv_s0_ABLATE_ct_ict_N8_N40_long_DONE:1
+slurm/ablate_one.sbatch|news 0 ct ict N8 N40 long|results/newsv_s0_ABLATE_ct_ict_N8_N40_long_DONE:1
+slurm/ablate_one.sbatch|adult 1 ct long|results/adultv_s1_ABLATE_ct_long_DONE:1
+slurm/ablate_one.sbatch|adult 2 ct long|results/adultv_s2_ABLATE_ct_long_DONE:1
+slurm/ablate_one.sbatch|default 1 ct long|results/defaultv_s1_ABLATE_ct_long_DONE:1
+slurm/ablate_one.sbatch|default 2 ct long|results/defaultv_s2_ABLATE_ct_long_DONE:1
+slurm/ablate_one.sbatch|news 1 ct long|results/newsv_s1_ABLATE_ct_long_DONE:1
+slurm/ablate_one.sbatch|news 2 ct long|results/newsv_s2_ABLATE_ct_long_DONE:1

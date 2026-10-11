@@ -1,0 +1,123 @@
+[
+ {
+  "group": "reference val.csv",
+  "nfe": null,
+  "n": 1,
+  "mle_roc_auc": 0.9118589102229148,
+  "mle_roc_auc_sd": NaN,
+  "mle_accuracy": 0.8595295129291812,
+  "mle_accuracy_sd": NaN,
+  "dcr_score": 0.4878648233486943,
+  "dcr_score_sd": NaN
+ },
+ {
+  "group": "reference real.csv",
+  "nfe": null,
+  "n": 1,
+  "mle_roc_auc": 0.9230324886497672,
+  "mle_roc_auc_sd": NaN,
+  "mle_accuracy": 0.8670843314292734,
+  "mle_accuracy_sd": NaN,
+  "dcr_score": 0.7742,
+  "dcr_score_sd": NaN
+ },
+ {
+  "group": "teacher euler 2",
+  "nfe": 2,
+  "n": 20,
+  "mle_roc_auc": NaN,
+  "mle_roc_auc_sd": NaN,
+  "mle_accuracy": NaN,
+  "mle_accuracy_sd": NaN,
+  "dcr_score": 0.32936,
+  "dcr_score_sd": 0.005799673312033685
+ },
+ {
+  "group": "teacher euler 4",
+  "nfe": 4,
+  "n": 20,
+  "mle_roc_auc": 0.8696462096923764,
+  "mle_roc_auc_sd": 0.005361063277133527,
+  "mle_accuracy": 0.8296388428229223,
+  "mle_accuracy_sd": 0.005678809023917346,
+  "dcr_score": 0.50023,
+  "dcr_score_sd": 0.009960189175967133
+ },
+ {
+  "group": "teacher heun 1",
+  "nfe": 1,
+  "n": 20,
+  "mle_roc_auc": NaN,
+  "mle_roc_auc_sd": NaN,
+  "mle_accuracy": NaN,
+  "mle_accuracy_sd": NaN,
+  "dcr_score": 0.07234,
+  "dcr_score_sd": 0.0039947860755582
+ },
+ {
+  "group": "teacher heun 8",
+  "nfe": 15,
+  "n": 20,
+  "mle_roc_auc": 0.8993440351606827,
+  "mle_roc_auc_sd": 0.0029321548108990725,
+  "mle_accuracy": 0.848688655487992,
+  "mle_accuracy_sd": 0.002330135020375898,
+  "dcr_score": 0.50468,
+  "dcr_score_sd": 0.005390205542414283
+ },
+ {
+  "group": "teacher heun 20",
+  "nfe": 39,
+  "n": 20,
+  "mle_roc_auc": 0.9095989075590367,
+  "mle_roc_auc_sd": 0.002088536862476771,
+  "mle_accuracy": 0.8573060622811866,
+  "mle_accuracy_sd": 0.0023434836643879556,
+  "dcr_score": 0.50784,
+  "dcr_score_sd": 0.005980177782958414
+ },
+ {
+  "group": "teacher heun 50",
+  "nfe": 99,
+  "n": 20,
+  "mle_roc_auc": 0.9091855077500245,
+  "mle_roc_auc_sd": 0.0024150659024908022,
+  "mle_accuracy": 0.8567010625882931,
+  "mle_accuracy_sd": 0.002326551210282797,
+  "dcr_score": 0.5086299999999999,
+  "dcr_score_sd": 0.006332298161015464
+ },
+ {
+  "group": "student student_study_s0",
+  "nfe": 1,
+  "n": 10,
+  "mle_roc_auc": 0.9032133155852973,
+  "mle_roc_auc_sd": 0.0007962902439172844,
+  "mle_accuracy": 0.8501750506725629,
+  "mle_accuracy_sd": 0.0016391929266188921,
+  "dcr_score": 0.50272,
+  "dcr_score_sd": 0.007010595156222068
+ },
+ {
+  "group": "student student_study_s0",
+  "nfe": 2,
+  "n": 10,
+  "mle_roc_auc": 0.9051391311784357,
+  "mle_roc_auc_sd": 0.0011621919826554944,
+  "mle_accuracy": 0.8532706836189423,
+  "mle_accuracy_sd": 0.0020523760175938655,
+  "dcr_score": 0.5066599999999999,
+  "dcr_score_sd": 0.00673105572039863
+ },
+ {
+  "group": "student student_study_s0",
+  "nfe": 4,
+  "n": 10,
+  "mle_roc_auc": 0.9036197441464203,
+  "mle_roc_auc_sd": 0.002880664489869827,
+  "mle_accuracy": 0.8525274860266567,
+  "mle_accuracy_sd": 0.0025106877825284055,
+  "dcr_score": 0.50496,
+  "dcr_score_sd": 0.00713102766475882
+ }
+]

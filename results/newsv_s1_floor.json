@@ -1,0 +1,9 @@
+{
+ "dataname": "newsv_s1",
+ "n_boot": 5,
+ "n": 32148,
+ "shape_floor": 1.4247257475840924,
+ "shape_floor_sd": 0.013753131112809644,
+ "trend_floor": 0.37753332326035505,
+ "trend_floor_sd": 0.026030047371355773
+}

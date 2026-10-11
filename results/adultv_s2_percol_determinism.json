@@ -1,0 +1,9 @@
+{
+ "cm_N1_c0_smax80_rho7_sel_s0.csv": {
+  "abs_diff_pp": 0.0
+ },
+ "heun_N50_c0_smax80_rho7_s0.csv": {
+  "abs_diff_pp": 0.0
+ },
+ "source": "logs/percol_check_adultv_s2.jsonl (25 Sep 2026)"
+}

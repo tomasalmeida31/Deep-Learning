@@ -1,0 +1,55 @@
+{
+ "dataset": "default",
+ "task_type": "binclass",
+ "n_train_shipped": 27000,
+ "n_val_initial": 2700,
+ "split_seed": 1234,
+ "legacy_target_in_fix": {
+  "n_moved": 0,
+  "n_val_final": 2700,
+  "n_train_final": 24300,
+  "moved_rows": [],
+  "reasons": {},
+  "moved_by_column": {},
+  "n_moved_only_because_of_target": 0
+ },
+ "task_aware": {
+  "n_moved": 0,
+  "n_val_final": 2700,
+  "n_train_final": 24300,
+  "moved_rows": [],
+  "reasons": {},
+  "moved_by_column": {},
+  "n_moved_only_because_of_target": 0
+ },
+ "defaultv_s0": {
+  "train_num": 24300,
+  "test_num": 2700,
+  "_split_fix": "absent (legacy)",
+  "train_num_matches_rule": [
+   "legacy_target_in_fix",
+   "task_aware"
+  ],
+  "val_rows_on_disk": 2700
+ },
+ "defaultv_s1": {
+  "train_num": 24300,
+  "test_num": 2700,
+  "_split_fix": "absent (legacy)",
+  "train_num_matches_rule": [
+   "legacy_target_in_fix",
+   "task_aware"
+  ],
+  "val_rows_on_disk": 2700
+ },
+ "defaultv_s2": {
+  "train_num": 24300,
+  "test_num": 2700,
+  "_split_fix": "absent (legacy)",
+  "train_num_matches_rule": [
+   "legacy_target_in_fix",
+   "task_aware"
+  ],
+  "val_rows_on_disk": 2700
+ }
+}
